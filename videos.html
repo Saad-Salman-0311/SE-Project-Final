@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informative Videos - Emotional Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-pink': '#ff10f0',
+                        'neon-purple': '#a855f7',
+                        'neon-cyan': '#06b6d4',
+                        'neon-blue': '#3b82f6',
+                        'neon-green': '#10b981',
+                        'dark-bg': '#0a0a0f',
+                        'dark-secondary': '#111118',
+                        'dark-card': 'rgba(26, 26, 46, 0.6)',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-bg text-white min-h-screen font-sans">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full glass-strong z-50 border-b border-purple-500/20 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl md:text-3xl font-display font-bold gradient-text">
+                    EI & Goals
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#home" class="nav-link text-sm font-medium tracking-wide transition-colors">Home</a>
+                    <a href="index.html#about" class="nav-link text-sm font-medium tracking-wide transition-colors">About</a>
+                    <a href="index.html#features" class="nav-link text-sm font-medium tracking-wide transition-colors">Features</a>
+                    <a href="index.html#blogs" class="nav-link text-sm font-medium tracking-wide transition-colors">Blogs</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Videos Section -->
+    <section class="min-h-screen py-20 px-4 pt-32 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-dark-secondary/30 to-transparent"></div>
+        <div class="container mx-auto max-w-7xl relative z-10">
+            <!-- Page Title -->
+            <div class="text-center mb-12 fade-in-section visible">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4">
+                    <span class="gradient-text" style="color: #ffffff;">Informative Videos</span>
+                </h1>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    Watch expert-led videos explaining emotional intelligence concepts and goal achievement strategies
+                </p>
+            </div>
+
+            <!-- Topic Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16 fade-in-section visible">
+                <button class="topic-btn active glass-strong px-8 py-3 rounded-full font-semibold text-white border border-purple-500/50 hover:border-purple-500 transition-all duration-300 hover:scale-105" data-topic="emotional-awareness">
+                    Emotional Awareness
+                </button>
+                <button class="topic-btn glass-strong px-8 py-3 rounded-full font-semibold text-white border border-cyan-500/50 hover:border-cyan-500 transition-all duration-300 hover:scale-105" style="opacity: 0.8;" data-topic="empathy-practice">
+                    Empathy Practice
+                </button>
+                <button class="topic-btn glass-strong px-8 py-3 rounded-full font-semibold text-white border border-pink-500/50 hover:border-pink-500 transition-all duration-300 hover:scale-105" style="opacity: 0.8;" data-topic="stress-management">
+                    Stress Management
+                </button>
+            </div>
+
+            <!-- Videos Grid -->
+            <div id="videos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Videos will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-secondary border-t border-purple-500/20 py-16 px-4 relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-bg to-transparent opacity-50"></div>
+        <div class="container mx-auto max-w-6xl relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-display font-bold mb-6 gradient-text">Tech Stack</h3>
+                    <p class="text-gray-400 mb-4">Built with cutting-edge web technologies:</p>
+                    <ul class="text-gray-400 space-y-2">
+                        <li class="flex items-center gap-2"><span class="text-neon-purple">▹</span> HTML5</li>
+                        <li class="flex items-center gap-2"><span class="text-neon-cyan">▹</span> Tailwind CSS</li>
+                        <li class="flex items-center gap-2"><span class="text-neon-pink">▹</span> JavaScript</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-display font-bold mb-6 gradient-text">Group Members</h3>
+                    <ul class="text-gray-400 space-y-2">
+                        <li class="flex items-center gap-2"><span class="text-neon-purple">▹</span> Group Member 1</li>
+                        <li class="flex items-center gap-2"><span class="text-neon-cyan">▹</span> Group Member 2</li>
+                        <li class="flex items-center gap-2"><span class="text-neon-pink">▹</span> Group Member 3</li>
+                        <li class="flex items-center gap-2"><span class="text-neon-purple">▹</span> Group Member 4</li>
+                        <li class="flex items-center gap-2"><span class="text-neon-cyan">▹</span> Group Member 5</li>
+                        <li class="flex items-center gap-2"><span class="text-neon-pink">▹</span> Group Member 6</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-purple-500/20 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Emotional Intelligence & Goal Achievement Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="videos.js"></script>
+</body>
+</html>

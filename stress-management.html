@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Management Exercise - EI & Goals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-pink': '#ff10f0',
+                        'neon-purple': '#a855f7',
+                        'neon-cyan': '#06b6d4',
+                        'neon-blue': '#3b82f6',
+                        'neon-green': '#10b981',
+                        'dark-bg': '#0a0a0f',
+                        'dark-secondary': '#111118',
+                        'dark-card': 'rgba(26, 26, 46, 0.6)',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-bg text-white min-h-screen font-sans">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full glass-strong z-50 border-b border-purple-500/20 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl md:text-3xl font-display font-bold gradient-text">
+                    EI & Goals
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#home" class="nav-link text-sm font-medium tracking-wide transition-colors">Home</a>
+                    <a href="index.html#about" class="nav-link text-sm font-medium tracking-wide transition-colors">About</a>
+                    <a href="index.html#features" class="nav-link text-sm font-medium tracking-wide transition-colors">Features</a>
+                    <a href="index.html#blogs" class="nav-link text-sm font-medium tracking-wide transition-colors">Blogs</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quiz Section -->
+    <section class="min-h-screen py-20 px-4 pt-32 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-dark-secondary/30 to-transparent"></div>
+        <div class="container mx-auto max-w-4xl relative z-10">
+            <!-- Exercise Title -->
+            <div class="text-center mb-12 fade-in-section">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4">
+                    <span class="gradient-text">Stress Management Exercise</span>
+                </h1>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="glass-strong p-8 rounded-2xl border border-pink-500/30 mb-10 fade-in-section">
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    This exercise assesses your ability to recognize, manage, and cope with stress effectively. 
+                    Effective stress management involves identifying stressors, understanding your stress responses, 
+                    and using healthy coping strategies. Answer based on your typical reactions and behaviors.
+                </p>
+            </div>
+
+            <!-- Quiz Form -->
+            <form id="quiz-form" class="glass-strong p-8 md:p-10 rounded-2xl border border-pink-500/30 fade-in-section">
+                <!-- Question 1 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-pink-500/20 hover:border-pink-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">1. How do you typically recognize when you're experiencing stress?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q1" value="0" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I notice physical and emotional signs immediately</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q1" value="1" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I notice stress after it's been building for a while</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q1" value="2" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I usually don't notice until someone points it out</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q1" value="3" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I rarely recognize when I'm stressed</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-pink-500/20 hover:border-pink-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">2. When you feel stressed, what is your immediate response?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q2" value="0" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I take deep breaths and use calming techniques</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q2" value="1" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I try to address the source of stress directly</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q2" value="2" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I become irritable or snap at others</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q2" value="3" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I shut down or avoid dealing with it</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-pink-500/20 hover:border-pink-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">3. How do you prioritize tasks when you're feeling overwhelmed?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q3" value="0" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I make a list and tackle tasks systematically</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q3" value="1" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I focus on the most urgent tasks first</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q3" value="2" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I try to do everything at once</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q3" value="3" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I procrastinate and avoid tasks</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-pink-500/20 hover:border-pink-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">4. What coping strategies do you use when stressed?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q4" value="0" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Healthy strategies like exercise, meditation, or talking to someone</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q4" value="1" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Distraction activities like watching TV or browsing the internet</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q4" value="2" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Unhealthy habits like overeating, smoking, or drinking</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q4" value="3" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I don't have any coping strategies</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-pink-500/20 hover:border-pink-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">5. How well can you identify what's causing your stress?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q5" value="0" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Very well - I can usually identify specific stressors</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q5" value="1" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Fairly well - I can identify most stressors</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q5" value="2" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Sometimes - I can identify some stressors</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q5" value="3" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Rarely - I often don't know what's causing my stress</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-pink-500/20 hover:border-pink-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">6. How do you handle unexpected stressful situations?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q6" value="0" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I stay calm and adapt quickly</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q6" value="1" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I take a moment to assess the situation before responding</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q6" value="2" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I panic or become overwhelmed</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q6" value="3" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I shut down and can't function</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-pink-500/20 hover:border-pink-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">7. How do you maintain work-life balance during stressful periods?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q7" value="0" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I set boundaries and make time for rest and relaxation</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q7" value="1" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I try to balance but sometimes work takes over</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q7" value="2" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I work constantly until the stress passes</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q7" value="3" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I don't maintain any balance - work always comes first</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-pink-500/20 hover:border-pink-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">8. How do you feel about asking for help when you're stressed?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q8" value="0" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I'm comfortable asking for help when needed</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q8" value="1" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I ask for help but only when I'm really struggling</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q8" value="2" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I'm reluctant to ask for help</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q8" value="3" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I never ask for help - I handle everything alone</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-pink-500/20 hover:border-pink-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">9. How does stress affect your sleep?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q9" value="0" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I maintain good sleep habits even when stressed</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q9" value="1" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Stress sometimes affects my sleep but I manage it</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q9" value="2" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Stress significantly disrupts my sleep</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q9" value="3" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I have chronic sleep problems when stressed</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-pink-500/20 hover:border-pink-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">10. How quickly do you recover from stressful situations?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q10" value="0" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Quickly - I bounce back within hours or a day</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q10" value="1" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Moderately - I recover within a few days</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q10" value="2" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Slowly - It takes me a week or more to recover</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:text-neon-cyan transition-colors">
+                            <input type="radio" name="q10" value="3" class="mt-1 mr-4 w-5 h-5 accent-pink-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Very slowly - Stress affects me for weeks or longer</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center mt-10">
+                    <button type="button" id="submit-quiz" class="cta-button bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan px-10 py-4 rounded-full text-lg font-semibold text-white shadow-lg shadow-pink-500/50 relative overflow-hidden">
+                        <span class="relative z-10">Submit & Analyze</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Loading Section -->
+            <div id="loading-section" style="display: none;" class="mt-12 glass-strong p-10 rounded-2xl border border-pink-500/30 text-center fade-in-section">
+                <div class="inline-block animate-spin rounded-full h-16 w-16 border-4 border-pink-500 border-t-transparent mb-6"></div>
+                <h3 class="text-2xl font-display font-bold mb-2 gradient-text">Wait a moment...</h3>
+                <p class="text-gray-300">Analyzing your responses</p>
+            </div>
+
+            <!-- Results Section (will be populated by JavaScript) -->
+            <div id="results-section" class="mt-12 glass-strong p-8 md:p-10 rounded-2xl border border-pink-500/30 fade-in-section" style="display: none;"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-secondary border-t border-purple-500/20 py-16 px-4 relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-bg to-transparent opacity-50"></div>
+        <div class="container mx-auto max-w-6xl relative z-10 text-center">
+            <p class="text-gray-400">&copy; 2024 Emotional Intelligence & Goal Achievement Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize quiz data
+        window.quizData = {
+            exerciseName: 'Stress Management',
+            questions: [
+                {
+                    question: "How do you typically recognize when you're experiencing stress?",
+                    options: [
+                        "I notice physical and emotional signs immediately",
+                        "I notice stress after it's been building for a while",
+                        "I usually don't notice until someone points it out",
+                        "I rarely recognize when I'm stressed"
+                    ]
+                },
+                {
+                    question: "When you feel stressed, what is your immediate response?",
+                    options: [
+                        "I take deep breaths and use calming techniques",
+                        "I try to address the source of stress directly",
+                        "I become irritable or snap at others",
+                        "I shut down or avoid dealing with it"
+                    ]
+                },
+                {
+                    question: "How do you prioritize tasks when you're feeling overwhelmed?",
+                    options: [
+                        "I make a list and tackle tasks systematically",
+                        "I focus on the most urgent tasks first",
+                        "I try to do everything at once",
+                        "I procrastinate and avoid tasks"
+                    ]
+                },
+                {
+                    question: "What coping strategies do you use when stressed?",
+                    options: [
+                        "Healthy strategies like exercise, meditation, or talking to someone",
+                        "Distraction activities like watching TV or browsing the internet",
+                        "Unhealthy habits like overeating, smoking, or drinking",
+                        "I don't have any coping strategies"
+                    ]
+                },
+                {
+                    question: "How well can you identify what's causing your stress?",
+                    options: [
+                        "Very well - I can usually identify specific stressors",
+                        "Fairly well - I can identify most stressors",
+                        "Sometimes - I can identify some stressors",
+                        "Rarely - I often don't know what's causing my stress"
+                    ]
+                },
+                {
+                    question: "How do you handle unexpected stressful situations?",
+                    options: [
+                        "I stay calm and adapt quickly",
+                        "I take a moment to assess the situation before responding",
+                        "I panic or become overwhelmed",
+                        "I shut down and can't function"
+                    ]
+                },
+                {
+                    question: "How do you maintain work-life balance during stressful periods?",
+                    options: [
+                        "I set boundaries and make time for rest and relaxation",
+                        "I try to balance but sometimes work takes over",
+                        "I work constantly until the stress passes",
+                        "I don't maintain any balance - work always comes first"
+                    ]
+                },
+                {
+                    question: "How do you feel about asking for help when you're stressed?",
+                    options: [
+                        "I'm comfortable asking for help when needed",
+                        "I ask for help but only when I'm really struggling",
+                        "I'm reluctant to ask for help",
+                        "I never ask for help - I handle everything alone"
+                    ]
+                },
+                {
+                    question: "How does stress affect your sleep?",
+                    options: [
+                        "I maintain good sleep habits even when stressed",
+                        "Stress sometimes affects my sleep but I manage it",
+                        "Stress significantly disrupts my sleep",
+                        "I have chronic sleep problems when stressed"
+                    ]
+                },
+                {
+                    question: "How quickly do you recover from stressful situations?",
+                    options: [
+                        "Quickly - I bounce back within hours or a day",
+                        "Moderately - I recover within a few days",
+                        "Slowly - It takes me a week or more to recover",
+                        "Very slowly - Stress affects me for weeks or longer"
+                    ]
+                }
+            ]
+        };
+    </script>
+    <script src="quiz.js"></script>
+</body>
+</html>

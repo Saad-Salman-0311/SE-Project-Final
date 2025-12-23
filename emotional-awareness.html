@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Awareness Exercise - EI & Goals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-pink': '#ff10f0',
+                        'neon-purple': '#a855f7',
+                        'neon-cyan': '#06b6d4',
+                        'neon-blue': '#3b82f6',
+                        'neon-green': '#10b981',
+                        'dark-bg': '#0a0a0f',
+                        'dark-secondary': '#111118',
+                        'dark-card': 'rgba(26, 26, 46, 0.6)',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-bg text-white min-h-screen font-sans">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full glass-strong z-50 border-b border-purple-500/20 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl md:text-3xl font-display font-bold gradient-text">
+                    EI & Goals
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#home" class="nav-link text-sm font-medium tracking-wide transition-colors">Home</a>
+                    <a href="index.html#about" class="nav-link text-sm font-medium tracking-wide transition-colors">About</a>
+                    <a href="index.html#features" class="nav-link text-sm font-medium tracking-wide transition-colors">Features</a>
+                    <a href="index.html#blogs" class="nav-link text-sm font-medium tracking-wide transition-colors">Blogs</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quiz Section -->
+    <section class="min-h-screen py-20 px-4 pt-32 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-dark-secondary/30 to-transparent"></div>
+        <div class="container mx-auto max-w-4xl relative z-10">
+            <!-- Exercise Title -->
+            <div class="text-center mb-12 fade-in-section">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4">
+                    <span class="gradient-text">Emotional Awareness Exercise</span>
+                </h1>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="glass-strong p-8 rounded-2xl border border-purple-500/30 mb-10 fade-in-section">
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    This exercise will help you assess your ability to recognize, understand, and reflect on your own emotions. 
+                    Answer each question honestly based on how you typically respond in various situations. There are no right or wrong answers—this is about self-awareness.
+                </p>
+            </div>
+
+            <!-- Quiz Form -->
+            <form id="quiz-form" class="glass-strong p-8 md:p-10 rounded-2xl border border-purple-500/30 fade-in-section">
+                <!-- Question 1 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">1. When you experience a strong emotion, how quickly do you recognize what you're feeling?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q1" value="0" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Immediately - I'm very aware of my emotions as they arise</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q1" value="1" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Within a few minutes - I usually figure it out quickly</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q1" value="2" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">After some time - It takes me a while to identify my feelings</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q1" value="3" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Rarely - I often don't know what I'm feeling</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">2. How do you typically respond when someone asks "How are you feeling?"</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q2" value="0" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I can describe my emotions accurately and in detail</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q2" value="1" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I give a general answer like "good" or "fine"</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q2" value="2" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I struggle to put my feelings into words</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q2" value="3" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I avoid answering or change the subject</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">3. When you feel upset, what do you usually do first?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q3" value="0" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Pause and identify what emotion I'm experiencing and why</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q3" value="1" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Try to distract myself from the feeling</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q3" value="2" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">React immediately without thinking about my emotions</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q3" value="3" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Ignore the feeling and push it away</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">4. How often do you reflect on your emotional patterns and triggers?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q4" value="0" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Regularly - I often think about what causes my emotions</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q4" value="1" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Sometimes - I reflect occasionally</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q4" value="2" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Rarely - I don't think much about my emotional patterns</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q4" value="3" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Never - I don't see the point in analyzing my emotions</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">5. Can you distinguish between similar emotions (e.g., anxiety vs. excitement)?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q5" value="0" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Yes, I can easily tell the difference between similar emotions</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q5" value="1" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Usually - I can distinguish most of the time</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q5" value="2" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Sometimes - It depends on the situation</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q5" value="3" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">No - I find it difficult to differentiate between similar emotions</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">6. How aware are you of physical sensations that accompany your emotions?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q6" value="0" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Very aware - I notice physical changes immediately</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q6" value="1" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Somewhat aware - I notice them sometimes</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q6" value="2" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Rarely aware - I don't pay much attention to physical sensations</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q6" value="3" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Not aware - I don't notice physical changes with emotions</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">7. When you experience conflicting emotions, how do you handle it?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q7" value="0" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I acknowledge both feelings and explore why they coexist</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q7" value="1" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I try to focus on one emotion and ignore the other</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q7" value="2" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I feel confused and don't know how to process it</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q7" value="3" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">I suppress both feelings and move on</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">8. How well can you identify the root cause of your emotions?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q8" value="0" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Very well - I can usually identify what triggered my emotion</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q8" value="1" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Fairly well - I can identify causes most of the time</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q8" value="2" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Sometimes - I can identify causes occasionally</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q8" value="3" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Rarely - I often don't know why I feel a certain way</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">9. How do you feel about expressing your emotions to others?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q9" value="0" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Comfortable - I can express my emotions openly when appropriate</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q9" value="1" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Somewhat comfortable - I express emotions with close friends/family</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q9" value="2" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Uncomfortable - I prefer to keep my emotions private</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q9" value="3" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Very uncomfortable - I avoid expressing emotions at all costs</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="mb-10 p-6 rounded-xl bg-dark-secondary/50 border border-purple-500/20 hover:border-purple-500/40 transition-all">
+                    <h3 class="text-xl font-display font-semibold mb-5 text-neon-pink">10. How often do you check in with yourself about your emotional state?</h3>
+                    <div class="space-y-3 ml-2">
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q10" value="0" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Multiple times a day - I'm constantly aware of my emotional state</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q10" value="1" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Daily - I check in with myself at least once a day</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q10" value="2" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Occasionally - I check in when something significant happens</span>
+                        </label>
+                        <label class="flex items-start cursor-pointer p-3 rounded-lg hover:bg-white/5 transition-all group">
+                            <input type="radio" name="q10" value="3" class="mt-1 mr-4 w-5 h-5 accent-purple-500" required>
+                            <span class="text-gray-300 group-hover:text-neon-cyan transition-colors">Rarely or never - I don't actively check in with my emotions</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center mt-10">
+                    <button type="button" id="submit-quiz" class="cta-button bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan px-10 py-4 rounded-full text-lg font-semibold text-white shadow-lg shadow-purple-500/50 relative overflow-hidden">
+                        <span class="relative z-10">Submit & Analyze</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Loading Section -->
+            <div id="loading-section" style="display: none;" class="mt-12 glass-strong p-10 rounded-2xl border border-purple-500/30 text-center fade-in-section">
+                <div class="inline-block animate-spin rounded-full h-16 w-16 border-4 border-purple-500 border-t-transparent mb-6"></div>
+                <h3 class="text-2xl font-display font-bold mb-2 gradient-text">Wait a moment...</h3>
+                <p class="text-gray-300">Analyzing your responses</p>
+            </div>
+
+            <!-- Results Section (will be populated by JavaScript) -->
+            <div id="results-section" class="mt-12 glass-strong p-8 md:p-10 rounded-2xl border border-purple-500/30 fade-in-section" style="display: none;"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-secondary border-t border-purple-500/20 py-16 px-4 relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-bg to-transparent opacity-50"></div>
+        <div class="container mx-auto max-w-6xl relative z-10 text-center">
+            <p class="text-gray-400">&copy; 2025 Emotional Intelligence & Goal Achievement Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize quiz data
+        window.quizData = {
+            exerciseName: 'Emotional Awareness',
+            questions: [
+                {
+                    question: "When you experience a strong emotion, how quickly do you recognize what you're feeling?",
+                    options: [
+                        "Immediately - I'm very aware of my emotions as they arise",
+                        "Within a few minutes - I usually figure it out quickly",
+                        "After some time - It takes me a while to identify my feelings",
+                        "Rarely - I often don't know what I'm feeling"
+                    ]
+                },
+                {
+                    question: "How do you typically respond when someone asks \"How are you feeling?\"",
+                    options: [
+                        "I can describe my emotions accurately and in detail",
+                        "I give a general answer like \"good\" or \"fine\"",
+                        "I struggle to put my feelings into words",
+                        "I avoid answering or change the subject"
+                    ]
+                },
+                {
+                    question: "When you feel upset, what do you usually do first?",
+                    options: [
+                        "Pause and identify what emotion I'm experiencing and why",
+                        "Try to distract myself from the feeling",
+                        "React immediately without thinking about my emotions",
+                        "Ignore the feeling and push it away"
+                    ]
+                },
+                {
+                    question: "How often do you reflect on your emotional patterns and triggers?",
+                    options: [
+                        "Regularly - I often think about what causes my emotions",
+                        "Sometimes - I reflect occasionally",
+                        "Rarely - I don't think much about my emotional patterns",
+                        "Never - I don't see the point in analyzing my emotions"
+                    ]
+                },
+                {
+                    question: "Can you distinguish between similar emotions (e.g., anxiety vs. excitement)?",
+                    options: [
+                        "Yes, I can easily tell the difference between similar emotions",
+                        "Usually - I can distinguish most of the time",
+                        "Sometimes - It depends on the situation",
+                        "No - I find it difficult to differentiate between similar emotions"
+                    ]
+                },
+                {
+                    question: "How aware are you of physical sensations that accompany your emotions?",
+                    options: [
+                        "Very aware - I notice physical changes immediately",
+                        "Somewhat aware - I notice them sometimes",
+                        "Rarely aware - I don't pay much attention to physical sensations",
+                        "Not aware - I don't notice physical changes with emotions"
+                    ]
+                },
+                {
+                    question: "When you experience conflicting emotions, how do you handle it?",
+                    options: [
+                        "I acknowledge both feelings and explore why they coexist",
+                        "I try to focus on one emotion and ignore the other",
+                        "I feel confused and don't know how to process it",
+                        "I suppress both feelings and move on"
+                    ]
+                },
+                {
+                    question: "How well can you identify the root cause of your emotions?",
+                    options: [
+                        "Very well - I can usually identify what triggered my emotion",
+                        "Fairly well - I can identify causes most of the time",
+                        "Sometimes - I can identify causes occasionally",
+                        "Rarely - I often don't know why I feel a certain way"
+                    ]
+                },
+                {
+                    question: "How do you feel about expressing your emotions to others?",
+                    options: [
+                        "Comfortable - I can express my emotions openly when appropriate",
+                        "Somewhat comfortable - I express emotions with close friends/family",
+                        "Uncomfortable - I prefer to keep my emotions private",
+                        "Very uncomfortable - I avoid expressing emotions at all costs"
+                    ]
+                },
+                {
+                    question: "How often do you check in with yourself about your emotional state?",
+                    options: [
+                        "Multiple times a day - I'm constantly aware of my emotional state",
+                        "Daily - I check in with myself at least once a day",
+                        "Occasionally - I check in when something significant happens",
+                        "Rarely or never - I don't actively check in with my emotions"
+                    ]
+                }
+            ]
+        };
+    </script>
+    <script src="quiz.js"></script>
+</body>
+</html>
