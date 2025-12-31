@@ -50,8 +50,8 @@ function handleQuizSubmission() {
     // Build questionsAndAnswers formatted text
     const questionsAndAnswers = buildQuestionsAndAnswers(answers);
     
-    // Call Gemini API
-    callGeminiAPI(questionsAndAnswers);
+    // Call Groq API
+    callGroqAPI(questionsAndAnswers);
 }
 
 // Collect all selected answers
@@ -170,9 +170,9 @@ function hideLoadingState() {
     }
 }
 
-// Call Gemini API
-async function callGeminiAPI(questionsAndAnswers) {
-    const API_KEY = 'AIzaSyA4abO43GuhmF6oVEKTitl9KQ1NzcECwZQ';
+// Call Groq API
+async function callGroqAPI(questionsAndAnswers) {
+    const API_KEY = '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'; // Replace with your Groq API key
     const currentQuizData = window.quizData || quizData;
     
     const prompt = `You are a professional psychologist and emotional intelligence coach.
@@ -194,20 +194,25 @@ Your task:
 8. Do NOT mention that you are an AI`;
 
     try {
-        // Use the working endpoint directly: gemini-2.5-flash with v1beta
-        const endpoint = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
+        // Groq API endpoint
+        const endpoint = 'https://api.groq.com/openai/v1/chat/completions';
         
-        const response = await fetch(`${endpoint}?key=${API_KEY}`, {
+        const response = await fetch(endpoint, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${API_KEY}`
             },
             body: JSON.stringify({
-                contents: [{
-                    parts: [{
-                        text: prompt
-                    }]
-                }]
+                model: 'llama-3.3-70b-versatile', // Updated to supported model. Other options: 'llama-3.1-8b-instant', 'mixtral-8x7b-32768', 'gemma-7b-it'
+                messages: [
+                    {
+                        role: 'user',
+                        content: prompt
+                    }
+                ],
+                temperature: 0.7,
+                max_tokens: 2000
             })
         });
 
@@ -219,10 +224,10 @@ Your task:
 
         const data = await response.json();
         
-        // Extract text from Gemini response
+        // Extract text from Groq response
         let analysisText = '';
-        if (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts) {
-            analysisText = data.candidates[0].content.parts[0].text;
+        if (data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) {
+            analysisText = data.choices[0].message.content;
         } else if (data.error) {
             throw new Error(data.error.message || 'API returned an error');
         } else {
@@ -234,13 +239,13 @@ Your task:
         displayResults(analysisText);
         
     } catch (error) {
-        console.error('Error calling Gemini API:', error);
+        console.error('Error calling Groq API:', error);
         hideLoadingState();
-        showError(error.message || 'Failed to connect to Gemini API. Please check your API key and try again.');
+        showError(error.message || 'Failed to connect to Groq API. Please check your API key and try again.');
     }
 }
 
-// Display results from Gemini
+// Display results from Groq
 function displayResults(analysisText) {
     const resultsSection = document.getElementById('results-section');
     if (!resultsSection) {

@@ -267,8 +267,12 @@ blogCards.forEach(card => {
     const readMoreBtn = card.querySelector('.read-more-btn');
     readMoreBtn.addEventListener('click', function(e) {
         e.stopPropagation();
-        const title = card.querySelector('h3').textContent;
-        showBlogModal(title);
+        const blogUrl = readMoreBtn.getAttribute('data-blog-url');
+        if (blogUrl && blogUrl.trim() !== '') {
+            window.open(blogUrl, '_blank');
+        } else {
+            console.warn('Blog URL not set for this article');
+        }
     });
 });
 
