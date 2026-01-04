@@ -4,7 +4,7 @@ const researchPapers = [
         authors: 'Salovey, P., & Mayer, J. D.',
         year: '1990',
         description: 'A foundational paper that introduced the concept of emotional intelligence, defining it as the ability to monitor one\'s own and others\' feelings and emotions, to discriminate among them, and to use this information to guide thinking and actions.',
-        link: '',
+        link: 'https://aec6905spring2013.wordpress.com/wp-content/uploads/2013/01/mayersaloveycaruso-2004.pdf',
         journal: 'Psychological Inquiry'
     },
     {
@@ -12,7 +12,7 @@ const researchPapers = [
         authors: 'Goleman, D.',
         year: '1998',
         description: 'This influential Harvard Business Review article explores how emotional intelligence distinguishes outstanding leaders and explains why EI matters more than IQ or technical skills in leadership effectiveness.',
-        link: '',
+        link: 'https://dme.childrenshospital.org/wp-content/uploads/2019/06/What-makes-a-Leader-HBR.pdf?utm_source=chatgpt.com',
         journal: 'Harvard Business Review'
     },
     {
@@ -20,7 +20,7 @@ const researchPapers = [
         authors: 'Maccann, C., Jiang, Y., Brown, L. E. R., Double, K. S., Bucich, M., & Minbashian, A.',
         year: '2020',
         description: 'A comprehensive meta-analysis examining the relationship between emotional intelligence and academic performance across multiple studies, providing evidence for the predictive validity of EI in educational contexts.',
-        link: '',
+        link: 'https://www.apa.org/pubs/journals/releases/bul-bul0000219.pdf',
         journal: 'Personality and Individual Differences'
     },
     {
@@ -28,7 +28,7 @@ const researchPapers = [
         authors: 'Barbey, A. K., Colom, R., & Grafman, J.',
         year: '2014',
         description: 'This neuroscience research investigates the brain structures and networks underlying emotional intelligence, revealing how different brain regions contribute to emotional processing and regulation.',
-        link: '',
+        link: 'https://www.neuroba.com/post/the-neuroscience-behind-emotional-intelligence-neuroba',
         journal: 'Current Opinion in Behavioral Sciences'
     },
     {
@@ -36,7 +36,7 @@ const researchPapers = [
         authors: 'Zeidner, M., Roberts, R. D., & Matthews, G.',
         year: '2008',
         description: 'A comprehensive review of emotional intelligence research, examining measurement approaches, theoretical frameworks, and empirical findings while addressing controversies and future directions in the field.',
-        link: '',
+        link: 'https://www.researchgate.net/publication/227794541_Emotional_Intelligence_in_the_Workplace_A_Critical_Review',
         journal: 'Review of General Psychology'
     },
     {
@@ -44,7 +44,7 @@ const researchPapers = [
         authors: 'O\'Boyle, E. H., Humphrey, R. H., Pollack, J. M., Hawver, T. H., & Story, P. A.',
         year: '2011',
         description: 'A meta-analytic study demonstrating the significant relationship between emotional intelligence and job performance across various occupations, highlighting the practical value of EI in professional settings.',
-        link: '',
+        link: 'https://www.researchgate.net/publication/220013302_Emotional_intelligence_and_job_performance_A_meta-analysis',
         journal: 'Journal of Organizational Behavior'
     }
 ];
