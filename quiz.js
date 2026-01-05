@@ -172,7 +172,8 @@ function hideLoadingState() {
 
 // Call Groq API
 async function callGroqAPI(questionsAndAnswers) {
-    const API_KEY = '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'; // Replace with your Groq API key
+    // Get your API key from https://console.groq.com/keys
+    const API_KEY = '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'; // Replace with your valid Groq API key from https://console.groq.com/
     const currentQuizData = window.quizData || quizData;
     
     const prompt = `You are a professional psychologist and emotional intelligence coach.
